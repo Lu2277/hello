@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<h1>Editing {{.Title}}</h1>
-
+<link rel="stylesheet" href="edit.css">
+<h1 class="brr"> {{printf "编辑Editing：%s" .Title}}</h1>
 <form action="/save/{{.Title}}" method="POST">
     <meta charset="UTF-8">
     <div>
-<textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}
+<textarea name="body" rows="20" cols="80">
+    {{printf "%s" .Body}}
 </textarea>
     </div>
 <div><input type="submit" value="save"> </div>
